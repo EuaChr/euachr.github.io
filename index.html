@@ -1,17 +1,139 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <link rel="stylesheet" href="assets/css/style.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Портфолио. Фронтенд разработка.">
   <meta name="keywords" content="Портфолио. Фронтенд разработка.">
   <meta name="format-detection" content="telephone=no">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   <title>Евгения Чернова</title>
 </head>
   <body>
-    <h1>Портфолио Евгении Черновой</h1>
-    <a href="pages/sedona/index.html">Sedona (верстка)</a>
-    <a href="pages/keksobooking/index.html">Keksobooking (JS)</a>
+    <div class="container">
+      <h1 class="visually-hidden">Портфолио Евгении Черновой</h1>
+      <header class="main-header">
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li>
+              <a href="#about">Обо мне</a>
+            </li>
+             <li>
+              <a href="#gallery">Портфолио</a>
+            </li>
+            <li>
+              <a href="https://github.com/EuaChr?tab=repositories">GitHub</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="main-header__wrapper">
+          <p class="intro">
+            <span class="intro__title">Евгения Чернова</span>
+            <span class="intro__desc">фронтенд разработка</span>
+          </p>
+        </div>
+      </header>
+
+      <main>
+        <section class="about" id="about">
+          <h2 class="about__title">Обо мне</h2>
+          <p>Пишу кроссбраузерную адаптивную верстку на флексах, использую в работе Gulp/Git/Sass.  <br>Знаю Bootstrap. Без проблем работаю с макетами в Sketch/Photoshop/Zeppelin. Пишу скрипты на нативном JS. Свободно говорю, пишу и читаю на английском языке.</p>
+          <p>Ценю хорошее юзабилити, стараюсь писать семантичную верстку, не забывая про доступность. Знаю основы сео-продвижения.</p>
+          <p>В google не забанена. Читаю спецификации и справочники. 
+            Исповедую инженерный подход и прикладываю основные усилия к изучению мат.части прежде чем браться за фреймворки.</p>
+          <p>Занимаюсь самообучением. В дальнейших планах: освоение ES6, ООП и паттерны, React/Angular/Vue.</p>
+
+          <p>Работаю на итоговую цель - законченный проект. Умею задавать вопросы до того, как сделана ненужная работа. Понимаю язык дизайнеров. Со смирением принимаю множественные правки дизайна когда макет уже сверстан.</p>
+          <b>Ищу компанию, где можно много и плодотворно трудиться на ниве фронтенда.</b>
+          <p>Здесь примеры верстки и javascript для оценки моих текущих навыков: <a href="https://github.com/EuaChr?tab=repositories">GitHub</a></p>
+
+        </section>
+
+        <section class="gallery" id="gallery">
+          <h2 class="gallery__title">портфолио</h2>
+          <ul class="gallery__list">
+            <li class="gallery__item">
+              <div class="gallery__wrapper">
+                <a href="pages/sedona/index.html" class="gallery__img" 
+                style="background-image: url(assets/img/sedona.jpg)"></a>
+                <p class="gallery__desc">
+                <b>Sedona.</b>
+                <span>
+                  Адаптивная верстка по макету для демонстрации текущего уровня навыков.
+                </span> </p>
+                <p class=gallery__inner>
+                  <a href="https://github.com/EuaChr/Sedona" class="btn-link">Код на GitHub</a>
+                <a href="pages/sedona/index.html" class="btn-link"> на сайт</a>
+                </p>
+              </div>
+            </li>
+
+            <li class="gallery__item">
+              <div class="gallery__wrapper">
+              <a href="pages/keksobooking/index.html" class="gallery__img" 
+              style="background-image: url(assets/img/keksobooking.jpg)"></a>
+              <p class="gallery__desc"> <b>Кексобукинг.</b>
+                <span>Скрипты для работы страницы букинга. Демонстрация текущего уровня навыков.</span>
+              </p>
+              <p class=gallery__inner>
+                <a href="https://github.com/EuaChr/Keksobooking" class="btn-link">Код на GitHub</a>
+                <a href="pages/keksobooking/index.html" class="btn-link"> На сайт</a>
+              </p>
+            </div>
+            </li>
+
+            <li class="gallery__item">
+              <div class="gallery__wrapper">
+                <a href="pages/sedona/index.html" class="gallery__img" 
+                style="background-image: url(assets/img/aqua.jpg)"></a>
+                <p class="gallery__desc">
+                  <b>Aqualibrium. Fridiving & swimming club.</b>
+                  <span> Сайт переделывался в полноценный интернет-магазин с блогом. Мной сделаны верстка, стилизация, подключены готовые и написаны новые скрипты.
+                  </span>
+                </p>
+                <p class=gallery__inner>
+                  <a href="https://www.aqualibrium.ru/" class="btn-link btn-link--alone">Перейти на сайт</a>
+                </p>
+              </div>
+            </li>
+             <li class="gallery__item">
+              <div class="gallery__wrapper">
+                <a href="pages/sedona/index.html" class="gallery__img gallery__img--leftside" 
+                style="background-image: url(assets/img/carolina.jpg)"></a>
+                <p class="gallery__desc">
+                  <b>Carolina Polyutina</b>
+                  <span>
+                    Верстка и стилизация десктопной и мобильной версий, подключение и настройка jQuery плагинов.
+                  </span>
+                </p>
+                <p class=gallery__inner>
+                  <a href="http://www.polyutina-carolina.com/" class="btn-link btn-link--alone">Перейти на сайт</a>
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+      </main>
+
+      <footer class="main-footer">
+        <p class="copyright">2019&copy; Евгения Чернова</p>
+        <ul class="social">
+          <li>
+            <a href="https://github.com/EuaChr?tab=repositories">
+              <span class="visually-hidden">GitHub</span>
+              <svg height="24" class="" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/EuaChr">
+              <span class="visually-hidden">Facebook</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </footer>    
+    </div>
   </body>
 </html>
