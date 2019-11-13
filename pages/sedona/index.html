@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link rel="stylesheet" href="assets/css/style.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Седона - это город в Аризоне, не менее красивый чем Гранд Каньон">
+  <meta name="keywords" content="Седона, Аризона">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="assets/img/favicons/site.webmanifest">
+  <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="assets/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <title>Седона</title>
+</head>
+  <body>
+    <div class="container">
+      <header class="main-header no-js">
+        <div class="main-header__nav-wrapper">
+          <nav class="main-nav">
+            <button class="main-nav__btn main-nav__btn--close" type="button" aria-label="Закрыть меню">
+              <span class="visually-hidden">Закрыть меню</span>
+            </button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="" class="main-nav__link">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="photo.html" class="main-nav__link">Фото и видео</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html" class="main-nav__link">Форма отзыва</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="https://github.com/EuaChr/Sedona" class="main-nav__link">Код на GitHub</a>
+              </li>
+            </ul>
+            <p class="main-nav__inner">
+               <button class="main-nav__btn main-nav__btn--open" type="button" aria-label="Открыть меню">
+                 <span class="visually-hidden">Открыть меню</span>
+               </button>
+            </p>
+          </nav>
+          <a class="main-nav__logo">
+            <picture class="main-nav__logo-img">
+              <source media="(min-width:1200px)" srcset="assets/img/logo-sedona-desktop.svg">
+              <source media="(min-width:768px)" srcset="assets/img/logo-sedona-tablet.svg">
+              <img src="assets/img/logo-sedona-mobile.svg" alt="Логотип Седона">
+            </picture>
+          </a>
+        </div>
+        <p class="main-header__promo">
+            <img src="assets/img/text-sedona-index.svg" alt="Wellcome to Sedona" width="282" height="214">
+        </p>
+      </header>
+      <main>
+        <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
+        <section class="intro">
+          <h2 class="intro__title">СЕДОНА — небольшой <br> городок в АРИЗОНЕ, заслуживающий большего!</h2>
+          <p class="intro__desc">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
+          </p>
+          <img class="intro__img" src="assets/img/bg-triangle.svg" alt="Декоративный элемент">
+        </section>
+        <section class="feature">
+          <h2 class="visually-hidden">Преимущества Седоны</h2>
+          <ul class="feature__list">
+            <li class="feature__item">
+              <div class="feature__wrapper">
+                <h3 class="feature__title">Настоящий <br>городок</h3>
+                <p class="feature__number">
+                  <span>№1</span></p>
+                <p class="feature__desc">Седона не аттракцион для туристов, там течет своя жизнь</p>
+              </div>
+              <div class="feature__img">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="assets/img/main-city-desktop@1x.webp 1x, assets/img/main-city-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="assets/img/main-city-tablet@1x.webp 1x, assets/img/main-city-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="assets/img/main-city-mobile@1x.webp 1x, assets/img/main-city-mobile@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="assets/img/main-city-desktop@1x.jpg 1x, assets/img/main-city-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="assets/img/main-city-tablet@1x.jpg 1x, assets/img/main-city-tablet@2x.jpg 2x">
+                  <img class="features__photo" src="assets/img/main-city-mobile@1x.jpg" srcset="assets/img/main-city-mobile@2x.jpg 2x" width="320" height="260" alt="Настоящий городок">
+                </picture>
+              </div>
+              <ul  class="detail">
+                <li class="detail__item">
+                  <p class="detail__wrapper">
+                    <svg class="detail__icon" width="39" height="37">
+                      <use xlink:href="assets/img/sprite.svg#icon-house"></use>
+                    </svg>
+                  </p>
+                  <h4 class="detail__title">Жилье</h4>
+                  <p class="detail__desc">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                </li>
+                <li class="detail__item">
+                  <p class="detail__wrapper">
+                    <svg class="detail__icon" width="32" height="38">
+                      <use xlink:href="assets/img/sprite.svg#icon-gift"></use>
+                    </svg>
+                  </p>
+                  <h4 class="detail__title">Сувениры</h4>
+                  <p class="detail__desc">Не только китайского, но и местного производства!</p>
+                </li>
+                <li class="detail__item">
+                  <p class="detail__wrapper">
+                    <svg class="detail__icon" width="40" height="35">
+                      <use xlink:href="assets/img/sprite.svg#icon-burger"></use>
+                    </svg>
+                  </p>
+                  <h4 class="detail__title">Еда</h4>
+                  <p class="detail__desc">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
+                </li>
+              </ul>
+            </li>
+            <li class="feature__item">
+              <div class="feature__wrapper">
+                <h3 class="feature__title">Там есть <br> мост дьявола</h3>
+                <p class="feature__number"><span>№2</span></p>
+                <p class="feature__desc">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+              </div>
+              <div class="feature__img">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="assets/img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="assets/img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="assets/img/main-bridge-mobile@1x.webp 1x, img/main-bridge-mobile@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="assets/img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="assets/img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+                  <img class="features__photo" src="assets/img/main-bridge-mobile@1x.jpg" srcset="assets/img/main-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Мост дьявола">
+                </picture>
+              </div>
+            </li>
+            <li class="feature__item feature__item--short">
+              <div class="feature__wrapper feature__wrapper--short">
+                <h3 class="feature__title">Небольшая <br> площадь</h3>
+                <p class="feature__number"><span>№3</span></p>
+                <p class="feature__desc">ВСЕ интересные места находятся очень близко</p>
+              </div>
+            </li>
+            <li class="feature__item feature__item--short">
+              <div class="feature__wrapper feature__wrapper--short">
+                <h3 class="feature__title">Красивая <br> дорога</h3>
+                <p class="feature__number"><span>№4</span></p>
+                <p class="feature__desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              </div>
+            </li>
+            <li class="feature__item feature__item--short">
+              <div class="feature__wrapper feature__wrapper--short">
+                <h3 class="feature__title">Мало <br> туристов</h3>
+                <p class="feature__number"><span>№5</span></p>
+                <p class="feature__desc">Большинство едет в гранд каньон и толпится там</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="booking">
+          <div class="booking__wrapper">
+            <h2 class="booking__title">Заинтересовались?</h2>
+            <p class="booking__desc">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+            <a class="booking__btn btn disabled">Найти гостиницу</a>
+          </div>
+          <div class="booking__map">
+             <iframe class="booking__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.13565754218!2d-111.83015804477046!3d34.854443815597605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C%20AZ%2086336%2C%20USA!5e0!3m2!1sen!2sru!4v1572548494645!5m2!1sen!2sru" width="600" height="450"></iframe>
+          </div>
+        </section>
+      </main>
+      <footer class="social">
+        <h2 class="visually-hidden">Мы в социальной сети</h2>
+        <span class="social__title">#visitSEDONA</span>
+        <ul class="social__list">
+          <li>
+              <a class="social__btn btn social__btn--twitter" href="#">
+                <span class="visually-hidden">Твиттер</span>
+                <svg width="18" height="14">
+                    <use xlink:href="assets/img/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+          </li>
+          <li>
+              <a class="social__btn btn social__btn--facebook" href="#">
+                <span class="visually-hidden">Фейсбук</span>
+                <svg width="9" height="18">
+                    <use xlink:href="assets/img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+          </li>
+          <li>
+              <a class="social__btn btn social__btn--youtube" href="#">
+                <span class="visually-hidden">Youtube</span>
+                  <svg width="20" height="14">
+                    <use xlink:href="assets/img/sprite.svg#icon-youtube"></use>
+                </svg>
+              </a>
+          </li>
+        </ul>
+        <a href="https://github.com/EuaChr/Sedona" class="social__link">Код на GitHub</a>
+      </footer>
+    </div>
+  <script src="assets/js/main.min.js"></script>
+  </body>
+</html>

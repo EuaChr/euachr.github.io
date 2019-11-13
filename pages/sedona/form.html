@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Оставьте свой отзыв о своем визите в Седону">
+    <meta name="keywords" content="Седона, Аризона">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>Отзыв о посещении Седоны</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="main-header no-js">
+        <div class="main-header__nav-wrapper">
+          <nav class="main-nav">
+            <button class="main-nav__btn main-nav__btn--close" type="button" aria-label="Закрыть меню">
+              <span class="visually-hidden">Закрыть меню</span>
+            </button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a  href="index.html" class="main-nav__link">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="photo.html" class="main-nav__link">Фото и видео</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html" class="main-nav__link">Форма отзыва</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="https://github.com/EuaChr/Sedona" class="main-nav__link">Код на GitHub</a>
+              </li>
+            </ul>
+            <p class="main-nav__inner">
+               <button class="main-nav__btn main-nav__btn--open" type="button" aria-label="Открыть меню">
+                 <span class="visually-hidden">Открыть меню</span>
+               </button>
+            </p>
+          </nav>
+          <a class="main-nav__logo" href="index.html" tabindex="0">
+            <picture class="main-nav__logo-img">
+              <source media="(min-width:1200px)" srcset="assets/img/logo-sedona-desktop.svg">
+              <source media="(min-width:768px)" srcset="assets/img/logo-sedona-tablet.svg">
+              <img src="assets/img/logo-sedona-mobile.svg" alt="Логотип Седона">
+            </picture>
+          </a>
+        </div>
+        <p class="main-header__promo main-header__promo--short">
+          <img src="assets/img/text-sedona.svg" alt="Wellcome to Sedona" width="229" height="39">
+        </p>
+      </header>
+      <main class="feedback">
+        <h1 class="visually-hidden">Форма обратной связи</h1>
+        <div class="feedback__intro">
+          <h2  class="feedback__subtitle feedback__subtitle--intro">Оставьте свой отзыв</h2>
+          <p class="feedback__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+          </p>
+        </div>
+        <form class="feedback__form" method="POST" action="https://echo.htmlacademy.ru">
+          <fieldset class="feedback__section feedback__section--name">
+            <legend class="feedback__subtitle">Представьтесь:</legend>
+            <p class="feedback__field">
+              <label for="user-name">Имя<sup>*</sup>:</label>
+              <input id="user-name" type="text" name="user-name" placeholder="Петр" required>
+            </p>
+             <p class="feedback__field">
+              <label for="user-surname">Фамилия<sup>*</sup>:</label>
+              <input id="user-surname" type="text" name="user-surname" placeholder="Иванов" required>
+            </p>
+             <p class="feedback__field">
+              <label for="user-patronymic">Отчество:</label>
+              <input id="user-patronymic" type="text" name="user-patronymic" placeholder="Александрович">
+            </p>
+          </fieldset>
+          <fieldset class="feedback__section">
+            <legend class="feedback__subtitle">Контактная информация:</legend>
+            <div class="feedback__inner">
+              <div class="feedback__field feedback__field--contacts">
+                <label for="user-tel">Контактный телефон<sup>*</sup>:</label>
+                <p>
+                  <svg class="feedback__icon" width="18" height="18">
+                      <use xlink:href="assets/img/sprite.svg#icon-phone"></use>
+                  </svg>
+                  <input id="user-tel" type="tel" name="user-phone" placeholder="Введите телефон">
+                </p>
+              </div>
+              <div class="feedback__field feedback__field--contacts">
+                <label for="user-email">Электронная почта<sup>*</sup>:</label>
+                <p>
+                  <svg class="feedback__icon" width="18" height="18">
+                    <use xlink:href="assets/img/sprite.svg#icon-mail"></use>
+                  </svg>
+                <input id="user-email" type="email" name="user-email" placeholder="Введите e-mail">
+                </p>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="feedback__section checklist feedback__section--impression">
+            <legend class="feedback__subtitle">Ваше общее впечатление:</legend>
+            <p>
+              <input class="checklist__input" id="impression-good" type="radio" name="impression" value="good"checked>
+              <label class="checklist__label" for="impression-good">Скорее положительное
+              </label>
+            </p>
+            <p>
+              <input class="checklist__input" id="impression-bad" type="radio" name="impression" value="bad">
+              <label class="checklist__label" for="impression-bad">Скорее отрицательное</label>
+            </p>
+            <p>
+              <input class="checklist__input" id="impression-neutral" type="radio" name="impression" value="neutral">
+              <label  class="checklist__label" for="impression-neutral">Затрудняюсь ответить
+              </label>
+            </p>
+          </fieldset>
+          <fieldset class="feedback__section checklist checklist--places">
+            <legend class="feedback__subtitle">Посещенные <br>достопримечательности:</legend>
+            <div class="checklist__wrapper">
+              <p>
+                <input class="checklist__input" id="place-devilbridge" type="checkbox" name="visited-places" value="devilbridge" checked>
+                <svg class="checklist__icon" width="23" height="16">
+                    <use xlink:href="assets/img/sprite.svg#icon-tick"></use>
+                </svg>
+                <label class="checklist__label checklist__label--checkbox" for="place-devilbridge"> Мост Дьявола</label>
+              </p>
+              <p>
+                 <input  class="checklist__input" id="place-bellmountain" type="checkbox" name="visited-places" value="bellmountain" checked>
+                 <svg class="checklist__icon" width="23" height="16">
+                    <use xlink:href="assets/img/sprite.svg#icon-tick"></use>
+                </svg>
+                 <label class="checklist__label checklist__label--checkbox" for="place-bellmountain">Гора-Колокол</label>
+              </p>
+              <p>
+                <input  class="checklist__input" id="place-slidepark" type="checkbox" name="visited-places" value="slidepark">
+                <svg class="checklist__icon" width="23" height="16">
+                    <use xlink:href="assets/img/sprite.svg#icon-tick"></use>
+                </svg>
+                <label class="checklist__label checklist__label--checkbox" for="place-slidepark">Слайд-парк</label>
+              </p>
+              <p>
+                <input  class="checklist__input" id="place-redrocks" type="checkbox" name="visited-places" value="redrocks" checked>
+                <svg class="checklist__icon" width="23" height="16">
+                    <use xlink:href="assets/img/sprite.svg#icon-tick"></use>
+                </svg>
+                <label class="checklist__label checklist__label--checkbox" for="place-redrocks">Красные скалы</label>
+              </p>
+            </div>
+          </fieldset>
+          <fieldset class="feedback__section feedback__section--comment">
+            <legend class="feedback__subtitle">Опишите свои эмоции:</legend>
+              <textarea  class="feedback__comment" placeholder="Опишите подробно все свои восторги"></textarea>
+          </fieldset>
+          <div class="feedback__btn-wrapper">
+            <button class="feedback__btn btn" type="submit">Отправить отзыв</button>
+            <p class="feedback__caution"><sup>*</sup> - Обязательные поля</p>
+          </div>
+        </form>
+        <section class="popup popup--success">
+          <h2 class="popup__title">Ваш отзыв отправлен!</h2>
+          <p class="popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
+          <button class="popup__btn btn" type="button">Закрыть окно</button>
+        </section>
+        <section class="popup popup--error">
+          <h2 class="popup__title">Что-то пошло <br> не так!</h2>
+          <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          <button class="popup__btn popup__btn--error btn" type="button" aria-label="Закрыть окно">ОК</button>
+        </section>
+      </main>
+      <footer class="social">
+        <h2 class="visually-hidden">Мы в социальной сети</h2>
+        <span class="social__title">#visitSEDONA</span>
+        <ul class="social__list">
+          <li>
+              <a class="social__btn btn social__btn--twitter" href="#">
+                <span class="visually-hidden">Твиттер</span>
+                <svg width="18" height="14">
+                    <use xlink:href="assets/img/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+          </li>
+          <li>
+              <a class="social__btn btn social__btn--facebook" href="#">
+                <span class="visually-hidden">Фейсбук</span>
+                <svg width="9" height="18">
+                    <use xlink:href="assets/img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+          </li>
+          <li>
+              <a class="social__btn btn social__btn--youtube" href="#">
+                <span class="visually-hidden">Youtube</span>
+                  <svg width="20" height="14">
+                    <use xlink:href="assets/img/sprite.svg#icon-youtube"></use>
+                </svg>
+              </a>
+          </li>
+        </ul>
+        <a href="https://github.com/EuaChr/Sedona" class="social__link">Код на GitHub</a>
+      </footer>
+    </div>
+    <script src="assets/js/main.min.js"></script>
+  </body>
+</html>
