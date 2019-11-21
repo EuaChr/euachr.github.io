@@ -24,7 +24,7 @@
     <title> Flatpickr for ag-grid</title>
   </head>
   <body>
-    <div id="myGrid" style="height: 300px; max-width:500px; margin: 50px auto 100px;" class="ag-theme-balham"></div>
+    <div id="myGrid" style="height: 300px; max-width:800px; margin: 50px auto 100px;" class="ag-theme-balham"></div>
   </main>
   <script>
     function getDatePicker() {
@@ -86,9 +86,9 @@
     
     // specify the data
     var rowData = [
-      {make: "Toyota", model: "Celica", price: 35000},
-      {make: "Ford", model: "Mondeo", price: 32000},
-      {make: "Porsche", model: "Boxter", price: 72000}
+      {make: "Toyota", model: "Celica", price: 35000, date: 'Double click to choose date'},
+      {make: "Ford", model: "Mondeo", price: 32000, date: 'Double click to choose date'},
+      {make: "Porsche", model: "Boxter", price: 72000, date: 'Double click to choose date'}
     ];
     
     // let the grid know which columns and what data to use
