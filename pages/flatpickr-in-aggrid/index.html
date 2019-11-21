@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/css/style.min.css">
+    <!-- Useful meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <!-- Ag-grid -->
+    <script src="https://unpkg.com/@ag-grid-community/all-modules/dist/ag-grid-community.min.noStyle.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@ag-grid-community/all-modules/dist/styles/ag-grid.css">
+    <link rel="stylesheet" href="https://unpkg.com/@ag-grid-community/all-modules/dist/styles/ag-theme-balham.css">
+    <!-- Flat pickr  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script> 
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></script>
+
+    <title> Flatpickr for ag-grid</title>
+  </head>
+  <body>
+    <div id="myGrid" style="height: 300px; max-width:500px; margin: 50px auto 100px;" class="ag-theme-balham"></div>
+  </main>
+  <script>
+    function getDatePicker() {
+      // function to act as a class
+      function Datepicker() {}
+
+      // gets called once before the renderer is used
+      Datepicker.prototype.init = function(params) {
+          // create the cell
+          this.eInput = document.createElement('input');
+          this.eInput.value = params.value;
+
+          flatpickr((this.eInput), {
+            defaultDate: new Date(),
+            dateFormat: "D, d-M-Y",
+            locale: "ru"
+          });
+      };
+
+      // gets called once when grid ready to insert the element
+      Datepicker.prototype.getGui = function() {
+          return this.eInput;
+      };
+
+      // focus and select can be done after the gui is attached
+      Datepicker.prototype.afterGuiAttached = function() {
+          this.eInput.focus();
+          this.eInput.select();
+      };
+
+      // returns the new value after editing
+      Datepicker.prototype.getValue = function() {
+          return this.eInput.value;
+      };
+
+      // any cleanup we need to be done here
+      Datepicker.prototype.destroy = function() {
+          // but this example is simple, no cleanup, we could
+          // even leave this method out as it's optional
+      };
+
+      // if true, then this editor will appear in a popup
+      Datepicker.prototype.isPopup = function() {
+          // and we could leave this method out also, false is the default
+          return false;
+      };
+
+      return Datepicker;
+    };
+
+
+    // specify the columns
+    var columnDefs = [
+      {headerName: "Make", field: "make"},
+      {headerName: "Model", field: "model"},
+      {headerName: "Price", field: "price"},
+      {headerName: "Choose date", field: "date", cellEditor: 'datePicker'}
+    ];
+    
+    // specify the data
+    var rowData = [
+      {make: "Toyota", model: "Celica", price: 35000},
+      {make: "Ford", model: "Mondeo", price: 32000},
+      {make: "Porsche", model: "Boxter", price: 72000}
+    ];
+    
+    // let the grid know which columns and what data to use
+    var gridOptions = {
+      components:{
+        datePicker: getDatePicker()
+      },
+      columnDefs: columnDefs,
+      rowData: rowData,
+
+      defaultColDef: {
+        editable: true,
+        resizable: true
+      }
+    };
+
+    // lookup the container we want the Grid to use
+    var eGridDiv = document.querySelector('#myGrid');
+
+    // create the grid passing in the div to use together with the columns & data we want to use
+    new agGrid.Grid(eGridDiv, gridOptions);
+    
+    gridOptions.api.sizeColumnsToFit();
+
+    </script>
+  </body>
+</html>
