@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link rel="stylesheet" href="assets/css/style.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="format-detection" content="telephone=no">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.2/rangeslider.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.2/rangeslider.min.css"> 
+
+  <!-- Favicon -->
+
+  <title>Анкета соискателя</title>
+</head>
+  <body>
+    <header class="page-header">
+      <div class="container">
+        <nav class="page-nav">
+          <button class="page-nav__btn page-nav__btn--closed" type="button"></button>
+
+          <ul class="page-nav__list">
+            <li>
+              <a class="page-nav__link" href="#name">Личная информация</a>
+            </li>
+             <li>
+              <a class="page-nav__link" href="#exp">Опыт</a>
+            </li>
+             <li>
+              <a class="page-nav__link" href="#js-skill">JavaScript</a>
+            </li>
+             <li>
+              <a class="page-nav__link" href="#about">О себе</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <h1 class="main__title">Анкета</h1>
+        <form class="form" action="#" method="POST" name="profile">
+          <fieldset id="name" class="form__section form__section--name">
+            <svg class="form__icon" width="47" height="47">
+              <use xlink:href="assets/img/sprite.svg#icon-book"></use>
+            </svg>
+            <h2 class="form__subtitle">Личная информация</h2>
+              <div class="form__column">
+                <input class="form__field active" id="fullname" type="text" name="fullname" value="Евгения Чернова">
+                <label class="form__field-text" for="fullname">ФИО</label>
+              </div>
+
+              <div class="form__column">
+                <div class="custom-select">
+                  <select class="form__field form__field--select" name="birth-year" id="birth-year">
+                    <option selected value="Год рождения">Год рождения</option>
+                    <option value="1980">1980</option>
+                    <option value="1981">1981</option>
+                    <option value="1982" selected>1982</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__column form__column--location">
+                <input class="form__field active" id="location" type="text" name="location" value="г.Москва">
+                <label class="form__field-text" for="location">Место проживания</label>
+              </div>
+               <div class="form__column">
+                <input class="form__field active" id="skype" type="text" name="skype" value="euachr">
+                <label class="form__field-text" for="skype">Skype</label>
+              </div>
+               <div class="form__column">
+                <input class="form__field active" id="email" type="email" name="email" value="eua.chr@gmail.com">
+                <label class="form__field-text" for="email">E-mail</label>
+              </div>
+          </fieldset>
+          <fieldset id="exp" class="form__section form__section--skill">
+             <svg class="form__icon" width="47" height="47">
+              <use xlink:href="assets/img/sprite.svg#icon-circle"></use>
+            </svg>
+            <h2 class="form__subtitle">Расскажите о своем опыте</h2>
+            <div class="form__wrapper">
+              <div class="form__column form__column--skill">
+                <div>
+                  <input class="visually-hidden" name="skils" value="bem" id="bem" type="checkbox" checked>
+                  <label class="form__label" for="bem">БЭМ/OOCSS</label>
+                </div>
+                <div>
+                  <input class="visually-hidden" name="skils"  id="sass" type="checkbox" checked>
+                  <label class="form__label" for="sass">Stylus/LESS/SASS</label>
+                </div>
+                <div>
+                  <input class="visually-hidden" name="skils" id="svg" type="checkbox" checked>
+                  <label class="form__label" for="svg">Работаю с SVG</label>
+                </div>
+              </div>
+              <div class="form__column form__column--skill">
+                <div>
+                  <input class="visually-hidden" name="skils" id="sem" type="checkbox" checked>
+                  <label class="form__label" for="sem">Верстаю семантично</label>
+                </div>
+                <div>
+                  <input class="visually-hidden" name="skils" id="es" type="checkbox" checked>
+                  <label class="form__label" for="es">ES2015/ES2016</label>
+                </div>
+                <div>
+                  <input class="visually-hidden" name="skils" id="gulp" type="checkbox" checked>
+                  <label class="form__label" for="gulp">Gulp/GRUNT</label>
+                </div>
+              </div>
+              <div class="form__column form__column--skill">
+                <div>
+                  <input class="visually-hidden" name="skils" id="webpack" type="checkbox">
+                  <label class="form__label" for="webpack">Webpack</label>
+                </div>
+                <div>
+                  <input class="visually-hidden" name="skils" id="jquery" type="checkbox" checked>
+                  <label class="form__label" for="jquery">jQuery</label>
+                </div>
+                <div>
+                  <input class="visually-hidden" name="skils" id="git" type="checkbox" checked>
+                  <label class="form__label" for="git">Ипользую Git</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset id="js-skill" class="form__section form__section--range">
+            <svg class="form__icon" width="47" height="47">
+              <use xlink:href="assets/img/sprite.svg#icon-js"></use>
+            </svg>
+            <h2 class="form__subtitle form__subtitle--range">Уровень владения JavaScript</h2>
+            <div class="range">
+              <ul class="range__list">
+                <li class="range__item">Не владею</li>
+                <li class="range__item">Использую готовые решения</li>
+                <li class="range__item">Использую готовые решения и умею и переделывать</li>
+                <li class="range__item">Пишу сложный JS <br>с нуля</li>
+              </ul>
+              <input class="range__input" id="js" type="range" name="js-level" min="0" max="400" step="100" value="400">
+              </div>
+          </fieldset>
+          <fieldset id="about" class="form__section form__section--about">
+            <svg class="form__icon" width="47" height="47">
+              <use xlink:href="assets/img/sprite.svg#icon-text"></use>
+            </svg>
+            <h2 class="form__subtitle form__subtitle--about">Расскажите о себе</h2>
+            <p class="form__description">Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.</p>
+            <textarea name="about" class="form__textarea" placeholder="Понравилась тем, что..."> Я ищу компанию, где можно много и плодотворно трудиться на ниве фронтенда. Похоже, что "Веб-мастерская" как раз может предложить много интересных проектов.
+            </textarea>
+          </fieldset>
+          <button class="form__btn" type="submit">Готово</button>
+        </form>
+      </div>
+    </main>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/input.js"></script>
+    <script src="assets/js/select.js"></script>
+    <script src="assets/js/rangeslider.js"></script>
+  </body>
+</html>
